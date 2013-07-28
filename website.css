@@ -43,3 +43,9 @@ h3, h4 {
     margin-right: 6cm;
     background-color: #FFF;
 }
+dt {
+    font-size: 170%;
+}
+dd {
+    font-size: 150%;
+}
