@@ -6,7 +6,9 @@ h1 {
     text-align: center;
     font-size: 30px
     color: #09F;
-    background-color: RoyalBlue     
+    border-style: solid;
+    border-color: #000 
+    background-color: RoyalBlue;     
     margin-left: auto;
     margin-right: auto;
 }
