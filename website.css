@@ -4,13 +4,13 @@
 h1 {
     font-family: 'Acme', sans-serif;
     text-align: center;
-    font-size: 250%;
-    color: #03F;
+    font-size: 370%;
+    color: #00F;
     border-style: solid;
     border-color: #000; 
-    background-color: #7CF;     
-    margin-left: 50px;
-    margin-right: 50px;
+    background-color: #BDF;     
+    margin-left: 350px;
+    margin-right: 350px;
     padding: 20px;
 }
 body {
