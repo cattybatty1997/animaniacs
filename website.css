@@ -67,10 +67,10 @@ section {
 dt {
     font-weight: bold;
     font-size: 150%;
-    color: #70D;
+    color: #409;
 }
 dd {
     margin: 0.5em;
     font-size: 125%;
-
+    color: #006;
 }
