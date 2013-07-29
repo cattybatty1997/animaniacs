@@ -5,9 +5,9 @@ h1 {
     font-family: 'Acme', sans-serif;
     text-align: center;
     font-size: 370%;
-    color: #00F;
+    color: #00B;
     border-style: solid;
-    border-color: #000; 
+    border-color: #90C; 
     background-color: #BDF;     
     margin-left: 350px;
     margin-right: 350px;
@@ -48,16 +48,19 @@ h3 {
     font-size: 250%;
     text-align: center;
 }
-h4 {
+p {
     font-family: 'Ubuntu', sans-serif;
     font-size: 200%;
 }
-h3, h4 {
+section {
     border-style: solid;
     border-color: #0CF;
-    margin-left: 6cm;
-    margin-right: 6cm;
+    margin-left: 5.5cm;
+    margin-right: 5.5cm;
+    margin-top: 3cm;
+    margin-bottom: 3cm;
     background-color: #FFF;
+    padding: 1cm;
 }
 dt {
     font-size: 170%;
