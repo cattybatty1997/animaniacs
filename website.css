@@ -2,15 +2,9 @@
 @import url(http://fonts.googleapis.com/css?family=Molle:400italic);
 @import url(http://fonts.googleapis.com/css?family=Ubuntu:700italic,500italic);
 h1 {
-    text-align: center;
     font-family: 'Acme', sans-serif;
-    padding: 30px;
-    border: 5px solid #007;
-    background-color: #9FD;
     margin-left: auto;
     margin-right: auto;
-    width: 200px;
-    color: #00F;
 }
 body {
     background-image:url('http://hras.studiojab.com/wp-content/uploads/2012/12/cherry_blossoms_flowers_kimono_umbrellas_flower_petals_japanese_clothes_anime_girls_black_hair_narda_Wallpaper_2560x1600_www.wallpapermi.com_.jpg');
