@@ -55,9 +55,12 @@ p {
 section {
     border-style: solid;
     border-color: #0CF;
-    margin-left: 6cm;
-    margin-right: 6cm;
+    margin-left: 5.5cm;
+    margin-right: 5.5cm;
+    margin-top: 3cm;
+    margin-bottom: 3cm;
     background-color: #FFF;
+    padding: 1cm;
 }
 dt {
     font-size: 170%;
