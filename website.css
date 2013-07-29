@@ -4,13 +4,14 @@
 h1 {
     font-family: 'Acme', sans-serif;
     text-align: center;
-    font-size: 30px
+    font-size: 250%;
     color: #09F;
     border-style: solid;
-    border-color: #000 
-    background-color: RoyalBlue;     
-    margin-left: auto;
-    margin-right: auto;
+    border-color: #000; 
+    background-color: #09F;     
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 20px;
 }
 body {
     background-image:url('http://hras.studiojab.com/wp-content/uploads/2012/12/cherry_blossoms_flowers_kimono_umbrellas_flower_petals_japanese_clothes_anime_girls_black_hair_narda_Wallpaper_2560x1600_www.wallpapermi.com_.jpg');
