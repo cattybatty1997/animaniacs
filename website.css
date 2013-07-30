@@ -57,7 +57,11 @@ h3 {
 p {
     font-family: 'Ubuntu', sans-serif;
     font-family: 'Fauna One', serif;
+<<<<<<< HEAD
     font-size: 175%;
+=======
+    font-size: 170%;
+>>>>>>> ee5de9ee801f0503595e64579ada8d6eb320c613
 }
 section {
     border-style: solid;
