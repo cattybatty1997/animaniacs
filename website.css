@@ -2,7 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=Molle:400italic);
 @import url(http://fonts.googleapis.com/css?family=Ubuntu:700italic,500italic);
 @import url(http://fonts.googleapis.com/css?family=Fauna+One);
-@import url(http://fonts.googleapis.com/css?family=Jacques+Francois);
+@import url(http://fonts.googleapis.com/css?family=Fauna+One);
 
 h1 {
     font-family: 'Acme', sans-serif;
@@ -56,7 +56,7 @@ h3 {
 }
 p {
     font-family: 'Ubuntu', sans-serif;
-    font-family: 'Jacques Francois', serif;
+    font-family: 'Fauna One', serif;
     font-size: 200%;
 }
 section {
