@@ -59,10 +59,11 @@ section {
     border-color: #0CF;
     margin-left: 5.5cm;
     margin-right: 5.5cm;
-    margin-top: none;
+    margin-top: 1.5cm;
     margin-bottom: 3cm;
     background-color: #FFF;
-    padding: 1cm;
+    padding-left: 1cm;
+    padding-right: 1cm;
 }
 dt {
     font-weight: bold;
