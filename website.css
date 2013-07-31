@@ -32,6 +32,12 @@ nav a, nav a:visited {
     font-weight: bold;
     text-decoration: none;
 }
+h2 + nav {
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
 body {
     background-image:url('http://www.desktopas.com/files/2013/06/Cherry-Blossoms-Flowers-Original-School-Uniforms-Anime-Girls-Other.jpg');
     background-attachment: fixed;
