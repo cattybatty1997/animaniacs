@@ -2,7 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=Molle:400italic);
 @import url(http://fonts.googleapis.com/css?family=Ubuntu:700italic,500italic);
 @import url(http://fonts.googleapis.com/css?family=Fauna+One);
-@import url(http://fonts.googleapis.com/css?family=Fauna+One);
+@import url(http://fonts.googleapis.com/css?family=Nunito);
 
 h1 {
     font-family: 'Acme', sans-serif;
@@ -55,13 +55,8 @@ h3 {
     text-align: center;
 }
 p {
-    font-family: 'Ubuntu', sans-serif;
-    font-family: 'Fauna One', serif;
-<<<<<<< HEAD
-    font-size: 175%;
-=======
+    font-family: 'Nunito', sans-serif;
     font-size: 170%;
->>>>>>> ee5de9ee801f0503595e64579ada8d6eb320c613
 }
 section {
     border-style: solid;
@@ -83,4 +78,15 @@ dd {
     margin: 0.5em;
     font-size: 125%;
     color: #006;
+}
+ol {
+    padding-top: 20px
+}
+ol li {
+    margin-left: 40px;
+    font-size: 60px;
+}
+ol li p {
+    font-size: 20px;
+    margin-top: -16px;
 }
