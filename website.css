@@ -3,10 +3,6 @@
 @import url(http://fonts.googleapis.com/css?family=Ubuntu:700italic,500italic);
 @import url(http://fonts.googleapis.com/css?family=Fauna+One);
 @import url(http://fonts.googleapis.com/css?family=Nunito);
-html, body {
-    width: 100%;
-    min-height: 100%
-}
 h1 {
     font-family: 'Acme', sans-serif;
     text-align: center;
