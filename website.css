@@ -93,8 +93,17 @@ ol {
 ol li {
     text-align: center;
     font-size: 60px;
+    margin-left: 3cm;
+    margin-right: 3cm;
 }
 ol li p {
     font-size: 20px;
     margin-top: -16px;
+}
+span {
+    font-size: 35px;
+    font-weight: bold;
+}
+span + span {
+    font-size: 27px;
 }
