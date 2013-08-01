@@ -103,7 +103,5 @@ ol li p {
 span {
     font-size: 35px;
     font-weight: bold;
-}
-span + span {
-    font-size: 27px;
+    color: #005
 }
