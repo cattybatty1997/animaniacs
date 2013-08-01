@@ -10,25 +10,18 @@ section {
     margin-bottom: 13px;
 }    
 section.intro {
-    float: left;
     margin-left: 1cm;
     width: 15cm;
 }
 .intro p {
     text-align: left;
-    font-size: 20px;
-    font-family; sans-serif;
+    font-size: 25px;
 }
 section.benefits {
-    float: left;
     width: 15cm;;
     padding: 3px;
     margin-top: 5px;
     margin-left: 1cm;
-}
-img {
-    float: right;
-    width: 3cm;
 }
 ul li {
     font-size: 20px;
@@ -46,13 +39,47 @@ footer {
 footer a:link {
     text-decoration: none;
 }
+.rs-slideshow {
+    border: 12px solid #444;
+    height: 400px;
+    margin-right; 1cm;
+    overflow: hidden;
+    position: relative;
+    width: 300px;
+    float: right;
+}
+.rs-slideshow .slide-container {
+    background-color: #444;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.rs-slideshow .slide-container img {
+    position: absolute;
+}
+ 
+/*    Hide the slide data container    */
+.rs-slideshow .slides {
+    display: none;
+}
 </style>
+<script src="jqzoo/js/jquery-current.min.js"></script>
+<script src="jquery.rs.slideshow.min.js"></script>
+<script>
+$(document).ready(function() {	
+     $("#slideshow-div").rsfSlideshow();
+});
+</script>
 </head>
 <body>
 
 <header>
 <h1>Animaniacs</h1>
 </header>
+
 
 <nav>
 <a href="index.html">Home</a>
@@ -63,11 +90,26 @@ footer a:link {
 <a href="about.html">About</a>
 </nav>
 
-
 <h2>Welcome to the World of Anime!</h2>
 
-<p><img src="http://terryshoemaker.files.wordpress.com/2013/03/placeholder1.jpg" alt="placeholder image"></p>
+<div id="slideshow-div" class="rs-slideshow">
+<div class="slide-container">
+<img src="slideshow/first.jpg" alt="First" title="First">
+</div>
 
+<ol class="slides">
+  <li><a href="slideshow/first.jpg">first.jpg</a></li>
+  <li><a href="slideshow/second.jpg">second.jpg</a></li>
+  <li><a href="slideshow/third.jpg">third.jpg</a></li>
+  <li><a href="slideshow/fourth.jpg">fourth.jpg</a></li>
+  <li><a href="slideshow/fifth.jpg">fifth.jpg</a></li>
+  <li><a href="slideshow/sixth.jpg">sixth.jpg</a></li>
+  <li><a href="slideshow/seventh.jpg">seventh.jpg</a></li>
+  <li><a href="slideshow/eight.jpg">eight.jpg</a></li>
+  <li><a href="slideshow/ninth.jpg">ninth.jpg</a></li>
+  <li><a href="slideshow/tenth.jpg">tenth.jpg</a></li>
+</ol>
+</div>
 <section class="intro">
 <p>So you have probably heard of anime, but did you know that it's more than just Japanese cartoons? At Animaniacs we challenge you to explore the wide universe of Anime and Manga. From fantasy, to comedy, to horror, there are hundreds of anime shows and movies and manga fandoms to be a part of. So what are you waiting for?</p>
 </section>
