@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>jQuery Demo: Don't Click Me!</title>
+<style type="text/css">
+body {
+    margin: 5em;
+    background-color: #FDA;
+}
+h1, a, a:visited {
+    color: #E75;
+    cursor: pointer;
+    text-decoration: none;
+}
+h1, h2, p {
+    text-align: center;
+}
+footer {
+    text-align: center;
+}
+</style>
+<script src="../js/jquery-current.min.js"></script>
+<script>
+$(document).ready(function() {
+    var clickCount = 0;
+    var messages = ['Ouch, you clicked me!', 'Stop that!',
+                    'Ouch, I told you to stop that!',
+                    'You click happy fool, knock it off!',
+                    'One more time and I\'m leaving...']
+
+    $('span').text(clickCount);
+
+    $('h1').click(function() {
+        $(this).text(messages[clickCount]);
+        clickCount++;
+        if (clickCount >= 6)
+            $('body').text("");
+        else
+            $('span').text(clickCount);
+    }); // end dblclick
+}); // end ready
+</script>
+</head>
+<body>
+<h1>jQuery Demo: Don't Click Me!</h1>
+<p><i>(Please do not click on the heading above!)</i></p>
+
+<h2>Click count is now: <span></span></h2>
+
+<footer>
+<hr>
+<a href="http://validator.w3.org/check/referer">
+<strong> HTML </strong> Valid! </a> |
+<a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3">
+<strong> CSS </strong> Valid! </a> |
+<a href="../index.html">Back to the Zoo</a>
+</footer>
+
+</body>
+</html>

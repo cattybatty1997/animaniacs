@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>jQuery Demo: Aunt Emily's Cats</title>
+<style type="text/css">
+@import url(cats.css);
+h1 {
+    text-align: center;
+    color: #F70;
+}
+</style>
+<script src="../js/jquery-current.min.js"></script>
+<script src="cats.js"></script>
+<script>
+$(document).ready(function() {
+    var messages = retrieveMails(); 
+    var clickCount = 0;
+
+    $("button").click(function() {
+        if (clickCount < messages.length) {
+            clickCount++;
+            if (clickCount < messages.length) {
+                $("button").text("Click for Next Message");
+            }
+            else {
+                $("button").text("No More Messages");
+            }
+        }
+        $("blockquote").text(messages[clickCount - 1]);
+        $("span").text(clickCount);
+    }); // end button click
+});  // end ready
+</script>
+</head>
+<body>
+<h1>jQuery Demo: Aunt Emily's Cats</h1>
+
+<p>This exercise is derived from chapter three of
+<a href="http://www.openbookproject.net/books/mi2pwjs">A Modern Introduction
+to Programming with JavaScript and jQuery</a>, which tells the story of
+crazy Aunt Emily and her fifty plus cats.</p>
+
+<p>The file <a href="cats.js">cats.js</a> contains a JavaScript function that
+returns an array of emails from Aunt Emily.  jQuery is used here to display
+these messages one at a time in response to button clicks. It also provides
+an easy to understand example of conditional branching at work in determining
+what message to display on the button and when to stop incrementing the
+click counter.
+</p>
+
+<h2>Email number: <span>None</span></h2>
+
+<blockquote></blockquote>
+
+<p><button>Click for 1st Message</button></p>
+
+<footer>
+<a href="http://validator.w3.org/check/referer">
+<strong> HTML </strong> Valid! </a> &nbsp;
+<a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3">
+<strong> CSS </strong> Valid! </a>
+</footer>
+
+</body>
+</html>

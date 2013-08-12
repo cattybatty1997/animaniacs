@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>jQuery Demo: .hover and .toggle Events</title>
+<style type="text/css">
+body.ugly {
+    background: #F6F6F6 url(frankenstein.jpg) no-repeat fixed right;
+}
+body.ugly section, body.ugly section h1, body.ugly section h2 {
+    color: #F70;
+}
+body.beautiful {
+    background: #F6F6F6 url(ingridbergman.jpg) no-repeat fixed right;
+}
+body.beautiful section h1 {
+    color: #07F;
+}
+body.beautiful section h2 {
+    color: #038;
+}
+h1 {
+    color: #338;
+}
+h2 {
+    color: #833;
+}
+h1, h2 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+div {
+    display: table;
+}
+div.seen {
+    display: block;
+    position: absolute;
+    margin-left: 400px;
+    margin-top: -50px;
+    padding: 20px;
+    background-color: #FEE;
+    border: 1px solid #000;
+}
+div.unseen {
+    display: none;
+}
+nav {
+    margin-top: 25px;
+    width: 150px;
+    padding: 10px;
+    border: 1px solid #000;
+}
+nav a, nav a:visited {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #558;
+}
+body.ugly nav a, body.ugly nav a:visited {
+    color: #F70;
+}
+body.beautiful nav a, body.beautiful nav a:visited {
+    color: #007;
+}
+</style>
+<script src="../js/jquery-current.min.js"></script>
+<script>
+// .toggleClick() replaces the .toggle() removed in jQuery 1.9
+$.fn.toggleClick = function() {
+    var events = arguments;
+    var iteration = 0;
+          
+    return $(this).click(function() {
+        events[iteration].apply(this, arguments);
+        iteration = (iteration + 1) % events.length;
+    });
+};
+
+$(document).ready(function() {
+    $("h2#ugly").hover(
+        function() {
+            if (!$("body").hasClass("beautiful"))
+                $("body").addClass("ugly");
+        },
+        function() {
+            if (!$("body").hasClass("beautiful"))
+                $("body").removeClass("ugly");
+        }
+    ); // end h2#ugly hover
+    $("h2#beautiful").hover(
+        function() {
+            $("div#message").removeClass("unseen");
+            $("div#message").addClass("seen");
+        },
+        function() {
+            $("div#message").removeClass("seen");
+            $("div#message").addClass("unseen");
+        }
+    ); // end h2#beautiful hover 
+    $("h2#beautiful").toggleClick(
+        function() {
+            $("body").addClass("beautiful");
+        },
+        function() {
+            $("body").removeClass("beautiful");
+        }
+    ); // end h2#beautiful toggleClick
+}); // end ready
+</script>
+</head>
+<body>
+<section>
+<h1>jQuery Demo: .hover and .toggle Events</h1>
+<h2 id="ugly">What Does <i>Ugly</i> Look Like? (Mouse over me to find out.)</h2>
+<h2 id="beautiful">How About <i>Beautiful</i>?</h2>
+</section>
+<div id="message" class="unseen">You have to click for beauty!</div>
+
+<nav>
+<a href="http://validator.w3.org/check/referer">
+<strong> HTML </strong> Valid! </a>
+<a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3">
+<strong> CSS </strong> Valid! </a>
+<a href="../index.html">Back to the Zoo</a>
+</nav>
+
+</body>
+</html>

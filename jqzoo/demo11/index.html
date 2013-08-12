@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>jQuery Demo: Simple Slide Show</title>
+<style type="text/css">
+h1, p {
+    text-align: center;
+}
+a, a:visited {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+}
+footer {
+    text-align: center;
+}
+.rs-slideshow {
+    border: 12px solid #444;
+    height: 640px;
+    margin: 24px auto;
+    overflow: hidden;
+    position: relative;
+    width: 800px;
+}
+.rs-slideshow .slide-container {
+    background-color: #444;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.rs-slideshow .slide-container img {
+    position: absolute;
+}
+ 
+/*    Hide the slide data container    */
+.rs-slideshow .slides {
+    display: none;
+}
+</style>
+<script src="../js/jquery-current.min.js"></script>
+<script src="js/jquery.rs.slideshow.min.js"></script>
+<script>
+$(document).ready(function() {	
+    $("#slideshow-div").rsfSlideshow();
+});
+</script>
+</head>
+<body>
+<h1>jQuery Demo: Simple Slide Show</h1>
+
+<div id="slideshow-div" class="rs-slideshow">
+<div class="slide-container">
+<img src="../resources/slides/blue.jpg" alt="Blue" title="Blue">
+</div>
+
+<ol class="slides">
+  <li><a href="../resources/slides/blue.jpg">blue.jpg</a></li>
+  <li><a href="../resources/slides/copacrosses.jpg">copacrosses.jpg</a></li>
+  <li><a href="../resources/slides/boat.jpg">boat.jpg</a></li>
+  <li><a href="../resources/slides/portrait.jpg">portrait.jpg</a></li>
+  <li><a href="../resources/slides/clownland.jpg">clownland.jpg</a></li>
+  <li><a href="../resources/slides/bird.jpg">bird.jpg</a></li>
+  <li><a href="../resources/slides/biomechAnt.jpg">biomechAnt.jpg</a></li>
+  <li><a href="../resources/slides/door.jpg">door.jpg</a></li>
+  <li><a href="../resources/slides/hunt.jpg">hunt.jpg</a></li>
+  <li><a href="../resources/slides/tree.jpg">tree.jpg</a></li>
+  <li><a href="../resources/slides/flower.jpg">flower.jpg</a></li>
+  <li><a href="../resources/slides/explosion.jpg">explosion.jpg</a></li>
+  <li><a href="../resources/slides/gugenheim.jpg">gugenheim.jpg</a></li>
+  <li><a href="../resources/slides/bearing.jpg">bearing.jpg</a></li>
+  <li><a href="../resources/slides/mud.jpg">mud.jpg</a></li>
+  <li><a href="../resources/slides/window.jpg">window.jpg</a></li>
+</ol>
+</div>
+
+<p>
+All images by
+<a href="http://www.carduner.net">Paul Carduner</a>.  The slide show jQuery
+plug-in is <a href="http://reallysimpleworks.com/slideshow">Really Simple
+Slideshow</a>.
+</p>
+
+<footer>
+<hr>
+<a href="http://validator.w3.org/check/referer">
+<strong> HTML </strong> Valid! </a> |
+<a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3">
+<strong> CSS </strong> Valid! </a> |
+<a href="../index.html">Back to the Zoo</a>
+</footer>
+
+</body>
+</html>

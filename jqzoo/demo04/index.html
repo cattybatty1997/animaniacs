@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>jQuery Demo: CSS Display And Visibility Properties 1</title>
+<style type="text/css">
+h1 {
+    text-align: center;
+    color: #338;
+}
+footer {
+    text-align: center;
+}
+footer a {
+    text-decoration: none;
+    font-weight: bold;
+}
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+td {
+    width: 360px;
+    height: 360px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    color: #FFF;
+}
+td#box1 {
+    background-color: #F00;
+}
+td#box2 {
+    background-color: #0F0;
+}
+td#box3 {
+    background-color: #00F;
+}
+.seen {
+    display: block;
+}
+.unseen {
+    visibility: hidden;
+}
+.notrendered {
+    display: none;
+}
+</style>
+<script src="../js/jquery-current.min.js"></script>
+<script>
+$(document).ready(function() {
+    $("button").click(function() {
+        if ($(this).text() == "Make Invisible")
+            $(this).closest("td").addClass("unseen");
+        else if ($(this).text() == "Don't Render")
+            $(this).closest("td").addClass("notrendered");
+    });
+}); // end ready
+</script>
+</head>
+<body>
+<h1>jQuery Demo: CSS Display And Visibility Properties 1</h1>
+
+<table>
+<tr>
+  <td id="box1"><button>Make Invisible</button><br>
+  <button>Don't Render</button></td>
+  <td id="box2"><button>Make Invisible</button><br>
+  <button>Don't Render</button></td>
+  <td id="box3"><button>Make Invisible</button><br>
+  <button>Don't Render</button></td>
+</tr>
+</table>
+
+<h2>Button Key</h2>
+<dl>
+    <dt><button>Make Invisible</button></dt>
+    <dd>Change <code>visibility</code> property from <code>visible</code> to
+    <code>hidden</code>.</dd>
+
+    <dt><button>Don't Render</button></dt>
+    <dd>Change <code>display</code> property from <code>table-cell</code> to
+    <code>none</code>.</dd>
+</dl>
+
+<footer>
+<hr>
+<a href="http://validator.w3.org/check/referer">
+<strong> HTML </strong> Valid! </a> |
+<a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3">
+<strong> CSS </strong> Valid! </a> |
+<a href="../index.html">Back to the Zoo</a>
+</footer>
+
+</body>
+</html>

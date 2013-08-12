@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>jQuery Demo: "Dropit" dropdown menu</title>
+<style type="text/css">
+@import url(css/main.css);
+@import url(css/dropit.css);
+ul.menu {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: -15px;
+}
+ul.menu li {
+    display: inline;
+    padding: 5px;
+    border: 1px solid #AAA;
+}
+.menu ul { display: none; } /* Hide before plugin loads */
+.menu ul.dropit-submenu {
+    background-color: #FFF;
+    border: 1px solid #B2B2B2;
+    padding: 6px 0;
+    margin: 3px 0 0 1px;
+    border-radius: 3px;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.15);
+}          
+.menu ul.dropit-submenu a {
+    display: block;
+    font-size: 14px;
+    line-height: 25px;
+    color: #7a868e;
+    padding: 0 18px;
+}
+.menu ul.dropit-submenu a:hover {
+    background: #248fc1;
+    color: #fff;
+    text-decoration: none;
+}
+header {
+    padding: 30px;
+    margin: 30px;
+    border: 1px dotted #777;
+}
+</style>
+<script src="../js/jquery-current.min.js"></script>
+<script src="js/dropit.js"></script>
+<script>
+$(document).ready(function() {
+    $('.menu').dropit();
+});
+</script>
+</head>
+<body>
+<header>
+<h1>jQuery Demo: <q>Dropit</q> dropdown menu</h1>
+<ul class="menu">
+  <li><a href="#">Animals</a>
+    <ul>
+      <li><a href="../demo01/index.html">Demo 1</a></li>
+      <li><a href="../demo02/index.html">Demo 2</a></li>
+      <li><a href="../demo03/index.html">Demo 3</a></li>
+      <li><a href="../demo04/index.html">Demo 4</a></li>
+    </ul>
+  </li>
+  <li><a href="#">Resources</a>
+    <ul>
+      <li><a href="http://jquery.com">jQuery site</a></li>
+      <li><a href="http://dev7studios.com/dropit">Dropit site</a></li>
+    </ul>
+  </li>
+</ul>
+</header>
+
+<p>
+The jQuery dropdown menu plug-in is from
+<a href="http://dev7studios.com/dropit">http://dev7studios.com/dropit</a>.
+</p>
+
+<footer>
+<hr>
+<a href="http://validator.w3.org/check/referer">
+<strong> HTML </strong> Valid! </a> |
+<a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3">
+<strong> CSS </strong> Valid! </a> |
+<a href="../index.html">Back to the Zoo</a>
+</footer>
+
+</body>
+</html>

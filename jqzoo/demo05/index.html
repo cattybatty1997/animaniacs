@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>jQuery Demo: CSS Display Properties 2</title>
+<style type="text/css">
+body {
+    margin: 50px;
+}
+h1 {
+    margin-bottom: 50px;
+}
+h2 {
+    margin-top: 50px;
+}
+h1, h2 {
+    margin-left: -20px;
+    color: #338;
+}
+span {
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #000;
+    background-color: #FD7;
+}
+footer {
+    margin-top: 35px;
+    text-align: center;
+}
+footer a {
+    text-decoration: none;
+    font-weight: bold;
+}
+</style>
+<script src="../js/jquery-current.min.js"></script>
+<script>
+$(document).ready(function() {
+    $("button").click(function() {
+        var value = $(this).text();
+        $("span").css("display", value);
+    });
+}); // end ready
+</script>
+</head>
+<body>
+<h1>jQuery Demo: CSS Display Properties 2</h1>
+
+<div>
+<span>box 1</span>
+<span>box 2</span>
+<span>box 3</span>
+<span>box 4</span>
+<span>box 5</span>
+<span>box 6</span>
+<span>box 7</span>
+<span>box 8</span>
+</div>
+
+<h2>Set Display Property To:</h2>
+<div>
+<button>inline</button>
+<button>block</button>
+<button>none</button>
+<button>list-item</button>
+<button>table</button>
+<button>table-row</button>
+<button>table-cell</button>
+<button>inline-block</button>
+<button>inline-table</button>
+<button>inherit</button>
+<button>run-in</button>
+</div>
+
+<footer>
+<hr>
+<a href="http://validator.w3.org/check/referer">
+<strong> HTML </strong> Valid! </a> |
+<a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3">
+<strong> CSS </strong> Valid! </a> |
+<a href="../index.html">Back to the Zoo</a>
+</footer>
+
+</body>
+</html>

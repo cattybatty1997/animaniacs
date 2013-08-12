@@ -1,0 +1,15 @@
+body {
+    font-family: arial;	
+    font-size: 12px;
+}
+h1, p {
+    text-align: center;
+}
+a, a:visited {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+}
+footer {
+    text-align: center;
+}

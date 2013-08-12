@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>jQuery Demo: One Page FAQ</title>
+<style type="text/css">
+h1, footer, p {
+    text-align: center;
+    color: #338;
+}
+dt {
+    font-weight: bold;
+    font-size: large;
+    margin-top: 1em;
+    margin-bottom: .5em;
+    color: #833;
+}
+dd {
+    margin-left: 3em;
+}
+button {
+    margin-left: .5em;
+    margin-right: .5em;
+}
+</style>
+<script src="../js/jquery-current.min.js"></script>
+<script>
+// .toggleClick() replaces the .toggle() removed in jQuery 1.9
+$.fn.toggleClick = function() {
+    var events = arguments;
+    var iteration = 0;
+          
+    return $(this).click(function() {
+        events[iteration].apply(this, arguments);
+        iteration = (iteration + 1) % events.length;
+    });
+};
+
+$(document).ready(function() {
+    $('dd').hide();
+    $('button').toggleClick(
+        function() {
+            $(this).text('-');
+            $(this).closest('dt').next('dd').slideDown();
+        },
+        function() {
+            $(this).text('+');
+            $(this).closest('dt').next('dd').fadeOut();
+        }
+    ); // end toggleClick
+}); // end ready
+</script>
+</head>
+<body>
+<h1>jQuery Demo: One Page FAQ</h1>
+<p>(with apologies to JavaScript &amp; jQuery: The Missing Manual)</p>
+
+<dl>
+  <dt><button>+</button>I've heard that jQuery is the answer to the meaning of
+  life, the universe, and everything. Is this this true?</dt>
+  <dd>Indeed it is!  Whenever anyone starts a question with <q>What is the
+  solution to ...</q> or <q>Is there anything that can help me with ...</q>, I
+  always answer, <q>jQuery!</q></dd>
+
+  <dt><button>+</button>Can jQuery really solve <i>all</i> of my problems?</dt>
+  <dd>Yes it can! jQuery makes programming more like writing a CSS rule or a
+  database query.  It takes the pain out of programming leaving you all the
+  power. How's that for cool?</dd>
+
+  <dt><button>+</button>Is there anything jQuery <i>can't</i> do?</dt>
+  <dd>Not a thing!  If you can think it, jQuery can do it! So dream on,
+  and learn jQuery!</dd> 
+</dl>
+
+<footer>
+<hr>
+<a href="http://validator.w3.org/check/referer">
+<strong> HTML </strong> Valid! </a> |
+<a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3">
+<strong> CSS </strong> Valid! </a> |
+<a href="../index.html">Back to the Zoo</a>
+</footer>
+
+</body>
+</html>

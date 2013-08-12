@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>jQuery Demo: Black Box on a Canvas</title>
+<style type="text/css">
+h1, p {
+    text-align: center;
+}
+a, a:visited {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+}
+footer {
+    text-align: center;
+}
+</style>
+<script src="../js/jquery-current.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {	
+    var canvases = $("canvas");
+    var context = canvases.get(0).getContext("2d");
+
+    context.fillRect(40, 40, 100, 100);
+});
+</script>
+</head>
+<body>
+<h1>jQuery Demo: Black Box on a Canvas</h1>
+
+<p><canvas width="200" height="200"></canvas></p>
+
+<footer>
+<hr>
+<a href="http://validator.w3.org/check/referer">
+<strong> HTML </strong> Valid! </a> |
+<a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3">
+<strong> CSS </strong> Valid! </a> |
+<a href="../index.html">Back to the Zoo</a>
+</footer>
+
+</body>
+</html>

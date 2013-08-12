@@ -1,0 +1,43 @@
+body {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+a, a:visited {
+    color: #A50;
+    font-weight: bold;
+    text-decoration: none;
+}
+footer {
+    text-align: center;
+}
+footer a {
+    display: inline;
+    margin-right: 10px;
+    width: 50px;
+    padding: 1px;
+    font-size: 9px;
+    font-family: Verdana, Geneva, sans-serif;
+    text-decoration: none;
+    text-align: center;
+    color: #222;
+    background-color: #DDD;
+    border: 1px solid black;
+    vertical-align: middle;
+    white-space: nowrap;
+    cursor: pointer;
+}
+footer a strong {
+    font-weight: bold;
+    color: #FFF;
+    background-color: #196182;
+    padding-left: 2px;
+    margin-right: 5px;
+}
+footer a:hover {
+    color: #FFF;
+    background-color: #196182;
+}
+footer a:hover strong {
+    color: #222;
+    background-color: #DDD;
+}
