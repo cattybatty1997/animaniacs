@@ -11,6 +11,8 @@
      <option> Series </option>
   </select>
   <br>
+  </fieldset>
+  <fieldset>
   <label>Genres:</label><br>
   <input type="checkbox" name="action" value="1"> Action
   <input type="checkbox" name="action" value="1"> Adventure
