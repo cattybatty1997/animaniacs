@@ -5,6 +5,6 @@ import bottle
 def index(name='Form'):
     the_message = 'Welcome Otaku {0}!'.format(name)
     return bottle.template('layout.tpl', message=the_message)
-
+    return bottle.template('form.tpl')
 bottle.run(host='0.0.0.0', port=8090)
                                             

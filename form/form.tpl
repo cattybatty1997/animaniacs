@@ -1,11 +1,13 @@
-<h2>{{Age}}</h2>
+<h2>Find Your Own Show</h2>
 <form method="GET" action="/">
   <fieldset>
-  <label>Age: <input name="guess" type="text"></label>
+  <label>Rating:</label><br>
   <input type="radio" name="age" value="G">G<br>
   <input type="radio" name="age" value="Teen">Teen<br>
   <input type="radio" name="age" value="Mature">Mature<br>
-  <label>Type:</label><br>
+  </fieldset>
+  <fieldset>
+<label>Type: </label>
   <select name="type">
      <option> Movies </option>
      <option> Series </option>
@@ -16,11 +18,11 @@
   <label>Genres:</label><br>
   <input type="checkbox" name="action" value="1"> Action
   <input type="checkbox" name="action" value="1"> Adventure
-  <input type="checkbox" name="action" value="1"> Comedy
+  <input type="checkbox" name="action" value="1"> Comedy 
+  <input type="checkbox" name="action" value="1"> Fantasy
   <input type="checkbox" name="action" value="1"> Romance
-  <input type="checkbox" name="action" value="1"> Sports
-  <input type="checkbox" name="action" value="1"> Ecchi
   <input type="checkbox" name="action" value="1"> Science Fiction
+  <input type="checkbox" name="action" value="1"> Sports
   </fieldset>
   <button type="submit">Submit my form</button>
 </form>
