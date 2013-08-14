@@ -23,6 +23,8 @@
   <input type="checkbox" name="action" value="1"> Romance
   <input type="checkbox" name="action" value="1"> Science Fiction
   <input type="checkbox" name="action" value="1"> Sports
+  <input type="checkbox" name="action" value="1"> Supernatural
+  <input type="checkbox" name="action" value="1"> Slice of Life
   </fieldset>
   <button type="submit">Submit my form</button>
 </form>
