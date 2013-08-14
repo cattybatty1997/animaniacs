@@ -1,6 +1,6 @@
 def loading_anime():
 
-f= open('anime.dat', 'r')
+f = open('anime.dat', 'r')
 raw_text = f.read()
 f.close()
 animes = raw_text.split('\n\n')
