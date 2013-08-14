@@ -1,6 +1,5 @@
 def loading_anime():
 
-<<<<<<< HEAD
 f = open('anime.dat', 'r')
 raw_text = f.read()
 f.close()
@@ -17,7 +16,6 @@ for anime in animes:
         new['genre'] = anime[3:]
         new_collection.append(new)
                                          
-=======
     f = open('data.dat', 'r')
     raw_text = f.read()
     f.close()
@@ -34,4 +32,3 @@ for anime in animes:
             new['genre'] = anime[3:]
             new_collection.append(new)
     return new_collection
->>>>>>> dac5c6894147c9fd1d238f63f19e46ad72cc1456

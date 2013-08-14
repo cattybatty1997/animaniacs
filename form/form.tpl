@@ -9,7 +9,7 @@
   <fieldset>
 <label>Type: </label>
   <select name="type">
-     <option> Movies </option>
+     <option> Movie </option>
      <option> Series </option>
   </select>
   <br>
