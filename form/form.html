@@ -8,22 +8,24 @@
 label {
     font-family: 'Ubuntu', sans-serif;
     font-size: 150%;
-    margin-top: 1cm;
+    margin-top: .5cm;
     color: #009;
 }
+label > input {
+    margin-top: .5cm;
+}
 input[type="radio"] {
-    font-size: 100%;
+    font-size: 125%;
     text-align: center;
-    margin-top: .7cm;
 }
 input[type="checkbox"] {
-    font-size: 100%;
+    font-size: 125%;
     text-align: center;
     margin-left; .5cm;
     margin-right; .5cm;
 }
 select {
-    font-size: 100%;
+    font-size: 125%;
     margin-top: 1cm;
 }
 button {
@@ -63,8 +65,8 @@ button {
   <input type="radio" name="age" value="Mature">Mature<br>
   <input type="radio" name="age" value="Any">Any<br>
 
-  <br>
   <label>Type: </label>
+  <br>
   <select name="type">
      <option> Movie </option>
      <option> Series </option>
