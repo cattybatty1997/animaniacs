@@ -1,60 +1,71 @@
-def process_text(list_of_raw_anime):
-    """
-      >>> result = process_text(['A\\nT\\nS\\nSup\\nAct\\nAdv\\nF'])
-      >>> len(result)
-      1
-      >>> type(result)
-      <class 'list'>
-      >>> result[0]['name']
-      'A'
-      >>> result[0]['genre']
-      ['Sup', 'Act', 'Adv', 'F']
-      >>> result2 = process_text(load_anime('test2.dat'))
-      >>> type(result2)
-      <class 'list'>
-      >>> len(result2)
-      2
-      >>> result3 = process_text(load_anime('anime.dat'))
-    """
-    processed_anime = []
-    new = {}
+from anime_utils import load_anime
 
-    for raw_anime in list_of_raw_anime:
-        stripped_anime = raw_anime.strip()
-        an_anime = stripped_anime.split('\n')
-
-    new['name'] = an_anime[0]
-    new['rating'] = an_anime[1]
-    new['type'] = an_anime[2]
-    new['genre'] = an_anime[3:]
-    processed_anime.append(new)
-
-
-    return processed_anime
-
-
-def load_anime(data_file):
-    """
-      >>> result = load_anime('test2.dat')
-      >>> len(result)
-      2
-      >>> result[0]
-      'A\\nT\\nS\\nSup\\nAct\\nAdv\\nF'
-      >>> result[1]
-      'B\\nAd\\nM\\nF\\nAct\\nSci'
-      >>> result = load_anime('anime.dat')
-    """
-    f = open(data_file, 'r')
-    raw_text = f.read()
-    f.close()
+class Anime:
+    def __init__(self, raw_anime):
+        """
+          >>> anime = Anime('A\\nTeen\\nSeries\\nAction\\nAdventure\\nFantasy')
+          >>> anime.name
+          'A'
+          >>> anime.rating
+          'Teen'
+          >>> anime.type
+          'Series'
+          >>> anime.genre
+          ['Action', 'Adventure', 'Fantasy']
+        """
+        raw_anime = raw_anime.strip()
+        split_raw = raw_anime.split('\n')
     
-    raw_anime = raw_text.split('##!##')
+        self.name = split_raw[0]
+        self.rating = split_raw[1]
+        self.type = split_raw[2]
+        self.genre = split_raw[3:]
 
-    for i in range(len(raw_anime)):
-        raw_anime[i] = raw_anime[i].strip()
+    def __str__(self):
+        s = 'Name: {0}\n'.format(self.name)
+        s += '    Rating: {0}\n'.format(self.rating)
+        s += '    Type: {0}\n'.format(self.type)
+        s += '    Genre: '
+        for genre in self.genre[:-1]:
+            s += '{0}, '.format(genre)
+        s += '{0}\n'.format(self.genre[-1])
 
-    return raw_anime
+        return s
 
+    def match(self, rating='any', type='either', genre=[]):
+        """
+          >>> match('T', 'S', 'Act', 'Fan')
+          >>> anime = ['A', 'T', 'S', 'Act', 'Fan']
+          >>> anime.match = anime[0]
+          >>> anime
+          'A'
+        """
+
+
+
+
+class Collection:
+    def __init__(self, raw_anime_list):
+        """
+          >>> my_anime = Collection(load_anime('test2.dat'))
+          >>> len(my_anime.anime)
+          2
+          >>> new_collection = Collection(load_anime('test3.dat'))
+          >>> len(new_collection.anime)
+          4
+        """
+        self.anime = []
+
+        for raw_anime in raw_anime_list:
+           self.anime.append(Anime(raw_anime)) 
+
+    def __str__(self):
+        s = ''
+        for anime in self.anime:
+            s += str(anime)
+        return s
+
+        
 
 if __name__ == '__main__':
     import doctest

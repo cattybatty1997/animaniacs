@@ -4,19 +4,21 @@
 <meta charset="utf-8">
 <title></title>
 <style>
-    @import url(../website.css);
-label {
+@import url(../website.css);
+h3 {
+    text-align: left;
     font-family: 'Ubuntu', sans-serif;
     font-size: 150%;
     margin-top: .5cm;
     color: #009;
 }
-label > input {
-    margin-top: .5cm;
+div#rating label {
+    display: block;
+    text-align: left;
 }
 input[type="radio"] {
+    display: 
     font-size: 125%;
-    text-align: center;
 }
 input[type="checkbox"] {
     font-size: 125%;
@@ -59,14 +61,15 @@ button {
 <p>Welcome to our viewer/anime matchmaking service. To help you start your anime adventure, we have created a questionnaire so you can find your new favorite anime. You're welcome.</p>
 
 <form method="GET" action="/">
-  <label>Rating:</label><br>
-  <input type="radio" name="age" value="G">G<br>
-  <input type="radio" name="age" value="Teen">Teen<br>
-  <input type="radio" name="age" value="Mature">Mature<br>
-  <input type="radio" name="age" value="Any">Any<br>
+<div id="rating">
+  <h3>Rating:</h3>
+  <label><input type="radio" name="age" value="G">G</label>
+  <label><input type="radio" name="age" value="Teen">Teen</label>
+  <label><input type="radio" name="age" value="Mature">Mature</label>
+  <label><input type="radio" name="age" value="Any">Any</label>
+</div>
 
   <label>Type: </label>
-  <br>
   <select name="type">
      <option> Movie </option>
      <option> Series </option>
