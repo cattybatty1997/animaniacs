@@ -5,6 +5,27 @@
 <title></title>
 <style>
     @import url(../website.css);
+label {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 200%;
+    margin-top: 2px;
+}
+input[type="radio"] {
+    margin-top: 2px;
+    font-size: 100%;
+}
+select > option {
+    font-size: 100%;
+}
+input[type="checkbox"] {
+    margin-left: 2px;
+    font-size: 100%;
+}
+button {
+    margin-top: 3px;
+    text-align: center;
+    font-size: 200%;
+}
 </style>
 </head>
 <body>
@@ -24,25 +45,23 @@
 </nav>
 
     <h2>Personalize Your Anime Experience</h2>
-    <section>
-      <fieldset>
-       <h2>Find Your Own Show</h2>
+<section>
+
+<p>Welcome to our viewer/anime matchmaking service. To help you start your anime adventure, we have created a questionnaire so you can find your new favorite anime. You're welcome.</p>
+
 <form method="GET" action="/">
-  <fieldset>
   <label>Rating:</label><br>
   <input type="radio" name="age" value="G">G<br>
   <input type="radio" name="age" value="Teen">Teen<br>
   <input type="radio" name="age" value="Mature">Mature<br>
-  </fieldset>
-  <fieldset> 
-<label>Type: </label>
+
+  <label>Type: </label>
   <select name="type">
      <option> Movie </option>
      <option> Series </option>
   </select>
   <br>
-  </fieldset>
-  <fieldset>
+  
   <label>Genres:</label><br>
   <input type="checkbox" name="action" value="1"> Action
   <input type="checkbox" name="action" value="1"> Adventure
@@ -53,12 +72,12 @@
   <input type="checkbox" name="action" value="1"> Slice of Life
   <input type="checkbox" name="action" value="1"> Sports
   <input type="checkbox" name="action" value="1"> Supernatural
-  </fieldset>
+  
   <button type="submit">Submit my form</button>
+
 </form>
+</section>
 
-
-    </section>
 <footer style="text-align: center;">
 <a href="http://validator.w3.org/check/referer">
 <strong> HTML </strong> Valid! </a>
