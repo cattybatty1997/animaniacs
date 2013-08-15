@@ -10,21 +10,29 @@ label {
     font-size: 200%;
     margin-top: 2px;
 }
-input[type="radio"] {
-    margin-top: 2px;
-    font-size: 100%;
+input[type="radio"], input[type="checkbox"] {
+    display: none;
 }
-select > option {
-    font-size: 100%;
+input[type="radio"]:checked {
+    content: "\2022";
+    font-size: 30px;
+    text-align: center;
+    line-height: 18px;
 }
 input[type="checkbox"] {
-    margin-left: 2px;
+    content: "\2713";
+    font-size: 15px;
+    color: #f3f3f3;
+    text-align: center;
+    line-height: 15px
+}
+select > option {
     font-size: 100%;
 }
 button {
     margin-top: 3px;
     text-align: center;
-    font-size: 200%;
+    font-size: 100%;
 }
 </style>
 </head>
