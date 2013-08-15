@@ -48,7 +48,6 @@ def load_anime(data_file):
     raw_text = f.read()
     f.close()
     
-    import pdb; pdb.set_trace()
     raw_anime = raw_text.split('##!##')
 
     for i in range(len(raw_anime)):
