@@ -10,7 +10,7 @@ class Anime:
           'Teen'
           >>> anime.type
           'Series'
-          >>> anime.genre
+          >>> anime.genres
           ['Action', 'Adventure', 'Fantasy']
         """
         raw_anime = raw_anime.strip()
@@ -19,28 +19,41 @@ class Anime:
         self.name = split_raw[0]
         self.rating = split_raw[1]
         self.type = split_raw[2]
-        self.genre = split_raw[3:]
+        self.genres = split_raw[3:]
 
     def __str__(self):
         s = 'Name: {0}\n'.format(self.name)
         s += '    Rating: {0}\n'.format(self.rating)
         s += '    Type: {0}\n'.format(self.type)
         s += '    Genre: '
-        for genre in self.genre[:-1]:
+        for genre in self.genres[:-1]:
             s += '{0}, '.format(genre)
-        s += '{0}\n'.format(self.genre[-1])
+        s += '{0}\n'.format(self.genres[-1])
 
         return s
 
-    def match(self, rating='any', type='either', genre=[]):
+    def match(self, rating=None, type=None, genres=[]):
         """
-          >>> match('T', 'S', 'Act', 'Fan')
-          >>> anime = ['A', 'T', 'S', 'Act', 'Fan']
-          >>> anime.match = anime[0]
-          >>> anime
-          'A'
+          >>> anime = Anime('A\\nTeen\\nSeries\\nAction\\nAdventure\\nFantasy')
+          >>> anime.match(rating='Teen')
+          True
+          >>> anime.match(rating='Teen', type='Movie')
+          False
+          >>> anime.match(rating='Teen', genres=['Action', 'Fantasy'])
+          True
+          >>> anime.match(rating='Teen', genres=['Action', 'Sports'])
+          False
         """
 
+        if rating and self.rating != rating:
+            return False
+        if type and self.type != type:
+            return False
+        for genre in genres:
+            if genre not in self.genres and genres:
+                return False
+        else:
+            return True
 
 
 
@@ -64,6 +77,16 @@ class Collection:
         for anime in self.anime:
             s += str(anime)
         return s
+
+    def matching_anime(self):
+        """
+        """
+        matches = []
+        for anime in anime.match:
+            matches.append(anime)
+
+        return matches
+
 
         
 

@@ -2,29 +2,37 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title></title>
+<title>Find A Fave</title>
 <style>
 @import url(../website.css);
 h3 {
     text-align: left;
     font-family: 'Ubuntu', sans-serif;
     font-size: 150%;
-    margin-top: .5cm;
+    margin-top: .7cm;
     color: #009;
+    margin-bottom: .1cm;
+}
+div + h3 {
+    margin-bottom: -.8cm;
+    margin-top: .7cm;
 }
 div#rating label {
     display: block;
     text-align: left;
 }
-input[type="radio"] {
-    display: 
-    font-size: 125%;
+br + h3 {
+    margin-bottom: -.4cm;
+    margin-top: .7cm;
 }
-input[type="checkbox"] {
+span {
+    margin-right: .4cm;
+    color: #000;
+    font-weight: normal;
+    font-size: 105%;
+}
+input {
     font-size: 125%;
-    text-align: center;
-    margin-left; .5cm;
-    margin-right; .5cm;
 }
 select {
     font-size: 125%;
@@ -35,6 +43,9 @@ button {
     margin-bottom: 1cm;
     text-align: center;
     font-size: 100%;
+}
+form {
+    margin-left: 1cm;
 }
 </style>
 </head>
@@ -78,16 +89,16 @@ button {
   <br>
   
   <h3>Genres:</h3><br>
-  <input type="checkbox" name="action" value="1"> Action
-  <input type="checkbox" name="action" value="1"> Adventure
-  <input type="checkbox" name="action" value="1"> Comedy
-  <input type="checkbox" name="action" value="1"> Fantasy
-  <input type="checkbox" name="action" value="1"> Romance
+  <span><input type="checkbox" name="action" value="1"> Action</span>
+  <span><input type="checkbox" name="action" value="1"> Adventure</span>
+  <span><input type="checkbox" name="action" value="1"> Comedy</span>
+  <span><input type="checkbox" name="action" value="1"> Fantasy</span>
+  <span><input type="checkbox" name="action" value="1"> Romance</span>
   <br>
-  <input type="checkbox" name="action" value="1"> Science Fiction
-  <input type="checkbox" name="action" value="1"> Slice of Life
-  <input type="checkbox" name="action" value="1"> Sports
-  <input type="checkbox" name="action" value="1"> Supernatural
+  <span><input type="checkbox" name="action" value="1"> Science Fiction</span>
+  <span><input type="checkbox" name="action" value="1"> Slice of Life</span>
+  <span><input type="checkbox" name="action" value="1"> Sports</span>
+  <span><input type="checkbox" name="action" value="1"> Supernatural</span>
   
   <br><button type="submit">Submit my form</button>
 
